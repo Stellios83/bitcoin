@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>pwall - universal paper wallet generator</title>	
+	<meta name="description" content="Simple, secure, easy to audit universal paper wallet generator">
+	<meta name="keywords" content="wallet, paper, offline, simple, pwall, universal">
+	<style>
+	body{font-family: Arial, Helvetica, sans-serif;font-size: 14px;}
+	table{border-collapse: collapse;width: 600px;margin-top:10px;}
+	td,th{border: 1px solid #dddddd;text-align: left;padding: 8px;}
+	.button{background-color: #4CAF50;border: none;color: white;
+	padding: 6px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;}
+	.button1{background-color: white; color: black; border: 2px solid #4CAF50;}
+	.button1:hover{background-color: #4CAF50;color: white;}
+	</style>
+</head>
+<body onload="generate()">
+		<h3>pwall<span style="font-weight:normal"> - a minimalistic and open-source paper wallet generator for Bitcoin (and derivatives)</span></h3>
+		<button class="button button1" onclick="generate()">Generate</button>
+		<button class="button button1" onclick="window.print()">Print</button>
+		<table>
+		<h4 style="color:blue">Bitcoin Wallet</h4>
+		<tr>
+		<th>Public Address <span style="color:green">(SHARE)</span></th>
+		<th>Private Key <span style="color:red">(SECRET)</span></th>
+		</tr>
+		<tr>
+		<td><div id="public"></div></td>
+		<td><div id="secret"></div></td>
+		</tr>
+		<tr>
+		<td><div id="public_qr"></div></td>
+		<td><div id="secret_qr"></div></td>
+		</tr>
+		</table>
+		<h4>Instructions</h4>
+		<li>Use this generator offline for maximum security by downloading the zip file below and running it on your own computer.</li>
+		<li>Generate and print your wallet; keep it in a secure location.</li>
+		<li>To deposit funds to this paper wallet, send them to the public address.</li>
+		<li>Private key is used to spend funds. Do not share it!</li>
+		<li>Check your balance by going to https://www.blockchain.com/ and entering your public address.</li>
+		<h4>Tips appreciated!</h4>
+		<li>BTC: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</li>
+		<li>ETH: LaWKxbNA3YMUZVDR4NbWXByPyGud73gamr</li>
+		<p>See <a href="https://gitlab.com/ermisd/pwall" target="_blank">GitLab repository</a> for more info. <a href="https://github.com/D-Ermis/XRPaperWallet/releases/" target="_blank">(Download zip)</a></p>
+	<script type="text/javascript">
+		function generate() {
+			var key = Bitcoin.ECKey.makeRandom();
+        	var PubKey = key.pub.getAddress().toString();
+        	var PrivKey = key.toWIF();
+			document.getElementById("public").innerText = PubKey;
+			document.getElementById("secret").innerText = PrivKey;
+			document.getElementById("public_qr").innerHTML = "";
+			document.getElementById("secret_qr").innerHTML = "";
+			new QRCode(document.getElementById("public_qr"), {text: PubKey, width: 128, height: 128});
+			new QRCode(document.getElementById("secret_qr"), {text: PrivKey, width: 128, height: 128});}
+	</script>
+	<script type="text/javascript" src="bitcoinjs.min.js"></script>
+	<script type="text/javascript" src="qrcode.min.js"></script>
+</body>
+</html>
