@@ -16,9 +16,9 @@ Feel free to use it. https://pwall.org/
 * Integrity of files validated using SHA-256 hashes; meaning files have not been tampered with (see below)
 * Almost every major cryptocurrencies are supported and easily accessible using subdomains **[coin].pwall.org**:
 	* https://bitcoin.pwall.org
+	* https://litecoin.pwall.org
 	* https://stellar.pwall.org
 	* https://ripple.pwall.org
-	* https://neo.pwall.org
 		
 #### Instructions
 * Use this generator offline for maximum security.
@@ -28,9 +28,10 @@ Feel free to use it. https://pwall.org/
 
 #### Tips appreciated!  
 **BTC**: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW  
-**ETH**: LaWKxbNA3YMUZVDR4NbWXByPyGud73gamr
+:punch:
 #
-##### Integrity validation
-* Bitcoin:
-	* bitcoinjs.min.js (SHA-256: 4ae83a544fe7bf3cb46aa86b1e89237aaa1be45cc074cf25506556d74c8ad990)
-	* qrcode.min.js (SHA-256: c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36)
+#### Integrity validation
+* [bitcoinjs.min.js](https://github.com/bitcoinjs/bitcoinjs-lib) 
+	* [SHA-256] c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36
+* [qrcode.min.js](https://github.com/davidshimjs/qrcodejs) 
+	* [SHA-256] c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36
