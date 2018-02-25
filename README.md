@@ -24,7 +24,7 @@ Feel free to use it. https://pwall.org/
 #### Instructions
 * Use this generator offline for maximum security.
 * Generate and print your wallet. Keep it in a secure location.
-* To deposit funds to your paper wallet, send them to the Bitcoin address.
+* Deposit funds to your paper wallet by sending them to the Bitcoin address.
 * Private key is used to spend funds. Do not share it!
 
 #### Tips appreciated!  

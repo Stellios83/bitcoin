@@ -13,7 +13,7 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 8px;}
 .button{padding:6px 10px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;cursor:pointer;}
 .button1{background-color:white;color:black;border:1px solid #7a7a7a;}
 .button2{background-color:#4f6fff;color:white;border:1px solid #7a7a7a;}
-.button1:hover{background-color:#4f6fff;color:white;}
+.button1:hover{background-color:#4f6fff;color:white;}a{color:black;}
 @media only screen and (max-width: 640px) {#secret, #public {font-size:9px;}table{width: 100%;}}</style>
 </head>
 <body onload="generate()">
@@ -30,19 +30,17 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 8px;}
 <tr><td id="secret">Generating...</td></tr>
 <tr><td id="secret_qr"></td></tr>
 <tr><td><h4>Instructions</h4>
-<li>Use this generator offline for maximum security by downloading the zip file below and running it on your own computer.</li>
 <li>Generate and print your wallet; keep it in a secure location.</li>
-<li>To deposit funds to this paper wallet, send them to the Bitcoin address.</li>
+<li>Deposit funds to this paper wallet by sending them to the Bitcoin address.</li>
 <li>Private key is used to spend funds. Do not share it!</li>
-<li>Check your balance by going to https://www.blockchain.com/ and entering your Bitcoin address.</li></td></tr></table>
-<h4>Tips appreciated!</h4>
-<li>BTC: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</li>
-<br><li>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a></li>
-<li id="update"></li>
+<li>Check your balance by going to <a href="https://www.blockchain.com/" target=_blank>https://www.blockchain.com/</a> and entering your Bitcoin address.</li></td></tr></table>
+<h4>Tips appreciated!</h4><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW
+<div><br>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a>
+<div id="update"></div></div>
 <script src="bitcoinjs.min.js"></script>
 <script src="qrcode.min.js"></script>
 <script>
-var x = document.lastModified; document.getElementById("update").innerHTML = "Latest update: " + x;
+var lastEdit = document.lastModified; document.getElementById("update").innerHTML = "Latest update: " + lastEdit;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
 document.getElementById("public").innerText = pubKey;
