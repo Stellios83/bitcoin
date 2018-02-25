@@ -12,7 +12,8 @@ Feel free to use it. https://pwall.org/
 #### Features
 * Simple, efficient, reasonably secure
 * Works offline
-* Transparent, easy to audit. 
+* Updated constantly
+* Transparent, easy to audit
 * Integrity of files validated using SHA-256 hashes; meaning files have not been tampered with (see below)
 * Almost every major cryptocurrencies are supported and easily accessible using subdomains **[coin].pwall.org**:
 	* https://bitcoin.pwall.org
@@ -23,7 +24,7 @@ Feel free to use it. https://pwall.org/
 #### Instructions
 * Use this generator offline for maximum security.
 * Generate and print your wallet. Keep it in a secure location.
-* To deposit funds to your paper wallet, send them to the public address.
+* To deposit funds to your paper wallet, send them to the Bitcoin address.
 * Private key is used to spend funds. Do not share it!
 
 #### Tips appreciated!  
