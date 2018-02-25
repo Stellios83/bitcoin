@@ -39,10 +39,10 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 8px;}
 <li>BTC: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</li>
 <br><li>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a></li>
 <li id="update"></li>
-<script src="bitcoinjs.js"></script>
+<script src="bitcoinjs.min.js"></script>
 <script src="qrcode.min.js"></script>
 <script>
-var x = document.lastModified; document.getElementById("update").innerHTML = "Last update: " + x;
+var x = document.lastModified; document.getElementById("update").innerHTML = "Latest update: " + x;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
 document.getElementById("public").innerText = pubKey;

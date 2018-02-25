@@ -31,7 +31,7 @@ Feel free to use it. https://pwall.org/
 :punch:
 #
 #### Integrity validation
-* [bitcoinjs.min.js](https://github.com/bitcoinjs/bitcoinjs-lib) 
-	* [SHA-256] c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36
+* [bitcoinjs.min.js](https://github.com/bitcoinjs/bitcoinjs-lib) v3.3.2
+	* [SHA-256] b60cea009ba031162c00fed73aca4348e2da8640309e27370af425024e99dbcf
 * [qrcode.min.js](https://github.com/davidshimjs/qrcodejs) 
 	* [SHA-256] c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36
