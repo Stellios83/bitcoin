@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pwall - Bitcoin paper wallet generator</title>	
+<title>pwall - universal paper wallet generator</title>	
 <meta name="description" content="An open-source Bitcoin paper wallet generator for minimalists">
 <meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency">
 <link rel="shortcut icon" href="favicon.ico">
@@ -13,8 +13,8 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
 .button{padding:6px 10px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;cursor:pointer;}
 .button1{background-color:white;color:black;border:1px solid #7a7a7a;}
 .button2{background-color:#4f6fff;color:white;border:1px solid #7a7a7a;}
-.button1:hover{background-color:#4f6fff;color:white;}a{color:black;}
-@media only screen and (max-width: 640px) {#secret, #public {font-size:10px;}table{width: 100%;}}</style>
+.button1:hover{background-color:#4f6fff;color:white;}a{color:black;}#secret_qr, #public_qr{height:105px;}#secret, #public{font-family: monospace;}
+@media only screen and (max-width: 640px){#secret, #public{font-size:10px;}table{width: 100%;}}</style>
 </head>
 <body onload="generate()">
 <h3>pwall <span style="font-weight:normal">- An open-source paper wallet generator for minimalists</span></h3>
@@ -44,7 +44,6 @@ for (i = 0; i < currencyNameURL.length; i++) {currencyNameURL[i].textContent = u
 <script src="bitcoinjs.min.js"></script>
 <script src="qrcode.min.js"></script>
 <script>
-var lastEdit = document.lastModified; document.getElementById("update").textContent = "Latest update: " + lastEdit;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
 document.getElementById("public").textContent = pubKey;
@@ -53,6 +52,7 @@ document.getElementById("public_qr").textContent = "";
 document.getElementById("secret_qr").textContent = "";
 new QRCode(document.getElementById("public_qr"), {text: pubKey, width: 100, height: 100});
 new QRCode(document.getElementById("secret_qr"), {text: privKey, width: 100, height: 100});}
+var lastEdit = document.lastModified; document.getElementById("update").textContent = "Latest update: " + lastEdit;
 </script>
 </body>
 </html>
