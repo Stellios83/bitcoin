@@ -7,6 +7,11 @@
 <meta name="description" content="An open-source Bitcoin paper wallet generator for minimalists">
 <meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency">
 <link rel="shortcut icon" href="favicon.ico">
+<script>
+var urlParam = window.location.search.substring(1);
+if (urlParam){var currencyNameURL = document.getElementsByClassName("currencyName");
+for (i = 0; i < currencyNameURL.length; i++) {currencyNameURL[i].textContent = urlParam;}}
+</script>
 <style>body{font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
 table{border-collapse: collapse;width: 480px;margin-top:10px;}
 td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
@@ -40,9 +45,6 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
 <script src="bitcoinjs.min.js"></script>
 <script src="qrcode.min.js"></script>
 <script>
-var urlParam = window.location.search.substring(1);
-if (urlParam){var currencyNameURL = document.getElementsByClassName("currencyName");
-for (i = 0; i < currencyNameURL.length; i++) {currencyNameURL[i].textContent = urlParam;}}
 var lastEdit = document.lastModified; document.getElementById("update").textContent = "Latest update: " + lastEdit;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
