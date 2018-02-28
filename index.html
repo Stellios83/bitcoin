@@ -41,7 +41,8 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
 <script src="qrcode.min.js"></script>
 <script>
 var urlParam = window.location.search.substring(1);
-if (urlParam){document.getElementsByClassName("currencyName").textContent = urlParam;}
+if (urlParam){var currencyNameURL = document.getElementsByClassName("currencyName");
+for (i = 0; i < currencyNameURL.length; i++) {currencyNameURL[i].textContent = urlParam;}}
 var lastEdit = document.lastModified; document.getElementById("update").textContent = "Latest update: " + lastEdit;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
