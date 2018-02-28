@@ -22,7 +22,7 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
 <button class="button button1" onclick="window.print()">Print</button>
 <a href="https://pwall.org"><input type="button" class="button button1" value="Home"/></a>
 <table>
-<tr><th style="text-align: right">Bitcoin Paper Wallet</th></tr>
+<tr><th id="currencyName" style="text-align: right"></th></tr>
 <tr><th>Bitcoin Address <span style="color:green">(SHARE)</span></th></tr>
 <tr><td id="public">Generating...</td></tr>
 <tr><td id="public_qr"></td></tr>
@@ -40,6 +40,8 @@ td,th{border: 1px solid #dddddd;text-align: left;padding: 6px;}
 <script src="bitcoinjs.min.js"></script>
 <script src="qrcode.min.js"></script>
 <script>
+var urlParam = window.location.search.substring(1);
+document.getElementById("currencyName").innerHTML = urlParam + " Paper Wallet";
 var lastEdit = document.lastModified; document.getElementById("update").innerHTML = "Latest update: " + lastEdit;
 function generate() {
 var {privKey, pubKey} = bitcoin.KeyPair();
