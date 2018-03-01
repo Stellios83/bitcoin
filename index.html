@@ -8,7 +8,7 @@
 <meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency, universal, minimal">
 <link rel="shortcut icon" href="favicon.ico">
 <style>
-body{font-family: Arial, Helvetica, sans-serif;font-size: 13px;}
+body{font-family: Arial, Helvetica, sans-serif;font-size: 14px;}
 table{border-collapse: collapse;width: 480px;margin-top:10px;}
 td,th{border: 2px solid #dddddd;text-align: left;padding: 5px;}
 .button{padding:6px 10px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;cursor:pointer;}
@@ -35,16 +35,16 @@ a{color:black;}#secret_qr,#public_qr{height:105px;}#secret,#public,#tips{font-fa
 <tr><td><div id="secret_qr"></div></td></tr>
 <tr><th>Instructions</th>
 <tr><td><div style="padding-bottom: 10px;"><small>
-<b>0. (Optional but highly recommended) Use this generator offline</b> for maximum security by downloading this website (zip file below) and double-clicking on index.html on a secure offline computer or a Linux LiveCD.
+<b>0. (Optional but highly recommended) Use pwall offline for maximum security</b> by downloading and extracting the zip file below and double-clicking on index.html on a secure offline computer or a Linux LiveCD.
 <br><b>1. Generate a new wallet</b> by clicking on the "Generate" button.
 <br><b>2. Print your new wallet</b> by clicking on the "Print" button. Keep your paper wallet in a secure location.
 <br><b>3. <span class="currencyName">Bitcoin</span> address</b> is used to receive or deposit funds to this paper wallet. You can share the address with others.
-<br><b>4. Private key</b> is used to spend funds stored in this wallet. <b>Do not share the private key!</b>
+<br><b>4. Private key</b> is used to spend funds stored in this wallet. Do not share the private key!
 <br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>https://www.blockchain.com/</a> and entering your <span class="currencyName">Bitcoin</span> address.</small></div></td></tr>
 </table>
-<div class="noprint"><br><b>Tips appreciated!</b><div id="tips"><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</div>
-<div><br>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a>
-<div id="update"></div></div></div>
+<small><div class="noprint"><br><b>Tips appreciated!</b><div id="tips"><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</div>
+<div><br><b>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a></b>
+<div id="update"></div></div></div></small>
 <script>
 var urlParam = window.location.search.substring(1);
 if (urlParam){var currencyNameURL = document.getElementsByClassName("currencyName");
