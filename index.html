@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pwall - Universal Paper Wallet Generator</title>	
 <meta name="description" content="An Open-source Universal Paper Wallet Generator for Minimalists">
-<meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency">
+<meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency, universal, minimal">
 <link rel="shortcut icon" href="favicon.ico">
 <style>
 body{font-family: Arial, Helvetica, sans-serif;font-size: 13px;}
@@ -14,7 +14,8 @@ td,th{border: 2px solid #dddddd;text-align: left;padding: 5px;}
 .button{padding:6px 10px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;cursor:pointer;}
 .button1{background-color:white;color:black;border:1px solid #7a7a7a;}
 .button2{background-color:#4f6fff;color:white;border:1px solid #7a7a7a;}
-.button1:hover{background-color:#4f6fff;color:white;}a{color:black;}#secret_qr,#public_qr{height:105px;}#secret,#public,#tips{font-family: monospace;}#secret,#secretLabel,#secret_qr{float:right;}
+.button1:hover{background-color:#4f6fff;color:white;}
+a{color:black;}#secret_qr,#public_qr{height:105px;}#secret,#public,#tips{font-family: monospace;}#secret,#secretLabel,#secret_qr{float:right;}
 @media only screen and (max-width: 640px){#secret, #public{font-size:10px;}table{width: 100%;}}@media print{.noprint {display:none;}}
 </style>
 </head>
@@ -25,20 +26,21 @@ td,th{border: 2px solid #dddddd;text-align: left;padding: 5px;}
 <button class="button button1" onclick="window.print()">Print</button>
 <a href="https://pwall.org"><input type="button" class="button button1" value="Home"/></a></div>
 <table>
-<tr><th style="text-align: center"><mark><span class="currencyName">Bitcoin</span> Paper Wallet</mark></th></tr>
+<tr><th style="text-align: right"><mark><span class="currencyName">Bitcoin</span> Paper Wallet</mark></th></tr>
 <tr><th><span class="currencyName">Bitcoin</span> Address <span style="color:green">(SHARE)</span></th></tr>
 <tr><td><div id="public">Generating...</div></td></tr>
 <tr><td><div id="public_qr"></div></td></tr>
 <tr><th><div id="secretLabel">Private Key <span style="color:red">(SECRET)</span></div></th></tr>
 <tr><td><div id="secret">Generating...</div></td></tr>
 <tr><td><div id="secret_qr"></div></td></tr>
-<tr><td><div style="padding-bottom: 10px;"><h4>Instructions</h4>
-<b>0. (Optional but highly recommended) Use this generator offline</b> for maximum security by downloading this website (zip file below) and double-clicking on index.html on a secure offline computer or a Linux LiveCD. 
+<tr><th>Instructions</th>
+<tr><td><div style="padding-bottom: 10px;"><small>
+<b>0. (Optional but highly recommended) Use this generator offline</b> for maximum security by downloading this website (zip file below) and double-clicking on index.html on a secure offline computer or a Linux LiveCD.
 <br><b>1. Generate a new wallet</b> by clicking on the "Generate" button.
-<br><b>2. Print your new wallet</b> by clicking on the "Print" button. Keep it in a secure location.
+<br><b>2. Print your new wallet</b> by clicking on the "Print" button. Keep your paper wallet in a secure location.
 <br><b>3. <span class="currencyName">Bitcoin</span> address</b> is used to receive or deposit funds to this paper wallet. You can share the address with others.
-<br><b>4. Private key</b> is used to spend funds stored in this wallet. <b>Do not share it.</b>
-<br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>https://www.blockchain.com/</a> and entering your <span class="currencyName">Bitcoin</span> address.</div></td></tr>
+<br><b>4. Private key</b> is used to spend funds stored in this wallet. <b>Do not share the private key!</b>
+<br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>https://www.blockchain.com/</a> and entering your <span class="currencyName">Bitcoin</span> address.</small></div></td></tr>
 </table>
 <div class="noprint"><br><b>Tips appreciated!</b><div id="tips"><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</div>
 <div><br>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a>
