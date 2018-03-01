@@ -3,48 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pwall - Universal Paper Wallet Generator</title>	
-<meta name="description" content="An Open-source Universal Paper Wallet Generator for Minimalists">
-<meta name="keywords" content="wallet, paper, offline, simple, pwall, bitcoin, btc, cryptocurrency, universal, minimal">
+<title>pwall.org - minimal universal paper wallet generator</title>
+<meta name="description" content="A minimal, reliable, open-source universal paper wallet generator supporting almost every major cryptocurrency">
+<meta name="keywords" content="wallet, paper, offline, pwall, bitcoin, btc, cryptocurrency, universal, minimal">
 <link rel="shortcut icon" href="favicon.ico">
 <style>
-body{font-family: Arial, Helvetica, sans-serif;font-size: 14px;}
-table{border-collapse: collapse;width: 480px;margin-top:10px;}
-td,th{border: 2px solid #dddddd;text-align: left;padding: 5px;}
+body{background-color: #f6f5f2;font-family: Arial, Helvetica, sans-serif;font-size: 14px;}
+#container{margin: auto;max-width: 500px;}#titleLabel{font-weight:normal;}
 .button{padding:6px 10px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;cursor:pointer;}
-.button1{background-color:white;color:black;border:1px solid #7a7a7a;}
-.button2{background-color:#4f6fff;color:white;border:1px solid #7a7a7a;}
-.button1:hover{background-color:#4f6fff;color:white;}
-a{color:black;}#secret_qr,#public_qr{height:105px;}#secret,#public,#tips{font-family: monospace;}#secret,#secretLabel,#secret_qr{float:right;}
-@media only screen and (max-width: 640px){#secret, #public{font-size:10px;}table{width: 100%;}}@media print{.noprint {display:none;}}
+.button1{background-color:#f6f5f2;color:black;border:1px solid #7a7a7a;}
+.button2{background-color:#4f6fff;color:#f6f5f2;border:1px solid #7a7a7a;}
+.button1:hover{background-color:#4f6fff;color:#f6f5f2;}
+table{border-collapse: collapse;margin-top:10px;}
+td,th{border: 2px solid #dedede;text-align: left;padding: 5px;}
+#titlePaper{text-align: right;}a{color:black;}#secret,#public,#tips{font-family: monospace;}#secret_qr,#public_qr{height:105px;}#secret,#secretLabel,#secret_qr{float:right;}
+.grayHeaders{background-color: #dedede;}#shareColor{color:green;}#secretColor{color:red;}#instructions{padding-bottom: 10px;}
+@media only screen and (max-width: 640px){#secret, #public{font-size:10px;}}@media print{.noprint {display:none;}}
 </style>
 </head>
 <body onload="generate()">
-<div class="noprint">
-<h3>pwall.org <span style="font-weight:normal">- An open-source universal paper wallet generator for minimalists</span></h3>
+<div id="container"><div class="noprint">
+<h3>pwall.org <span id="titleLabel">- A minimal, open-source universal paper wallet generator</span></h3>
 <button class="button button2" onclick="generate()">Generate</button>
 <button class="button button1" onclick="window.print()">Print</button>
 <a href="https://pwall.org"><input type="button" class="button button1" value="Home"/></a></div>
 <table>
-<tr><th style="text-align: right"><mark><span class="currencyName">Bitcoin</span> Paper Wallet</mark></th></tr>
-<tr><th><span class="currencyName">Bitcoin</span> Address <span style="color:green">(SHARE)</span></th></tr>
+<tr><th id="titlePaper"><mark><span class="currencyName">Bitcoin</span> Paper Wallet</mark></th></tr>
+<tr><th class="grayHeaders"><span class="currencyName">Bitcoin</span> Address <span id="shareColor">(SHARE)</span></th></tr>
 <tr><td><div id="public">Generating...</div></td></tr>
 <tr><td><div id="public_qr"></div></td></tr>
-<tr><th><div id="secretLabel">Private Key <span style="color:red">(SECRET)</span></div></th></tr>
+<tr><th class="grayHeaders"><div id="secretLabel">Private Key <span id="secretColor">(SECRET)</span></div></th></tr>
 <tr><td><div id="secret">Generating...</div></td></tr>
 <tr><td><div id="secret_qr"></div></td></tr>
-<tr><th>Instructions</th>
-<tr><td><div style="padding-bottom: 10px;"><small>
+<tr><th class="grayHeaders">Instructions</th>
+<tr><td><div id="instructions"><small>
 <b>0. (Optional but highly recommended) Use pwall offline for maximum security</b> by downloading and extracting the zip file below and double-clicking on index.html on a secure offline computer or a Linux LiveCD.
 <br><b>1. Generate a new wallet</b> by clicking on the "Generate" button.
 <br><b>2. Print your new wallet</b> by clicking on the "Print" button. Keep your paper wallet in a secure location.
 <br><b>3. <span class="currencyName">Bitcoin</span> address</b> is used to receive or deposit funds to this paper wallet. You can share the address with others.
 <br><b>4. Private key</b> is used to spend funds stored in this wallet. Do not share the private key!
-<br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>https://www.blockchain.com/</a> and entering your <span class="currencyName">Bitcoin</span> address.</small></div></td></tr>
+<br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>blockchain.com</a> and entering your <span class="currencyName">Bitcoin</span> address.</small></div></td></tr>
 </table>
 <small><div class="noprint"><br><b>Tips appreciated!</b><div id="tips"><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</div>
 <div><br><b>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a></b>
-<div id="update"></div></div></div></small>
+<div id="update"></div></div></div></small></div>
 <script>
 var urlParam = window.location.search.substring(1);
 if (urlParam){var currencyNameURL = document.getElementsByClassName("currencyName");
