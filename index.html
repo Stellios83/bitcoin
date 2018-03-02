@@ -36,8 +36,8 @@ body{background-color: #f6f5f2;font-family: Arial, Helvetica, sans-serif;font-si
 .button:hover{background-color:#353535;color:#f6f5f2;}
 table{background-color: white;border-collapse: collapse;margin:10px 0;}
 td,th{border: 2px solid #dedede;text-align: left;padding: 5px;}
-#titlePaper{text-align: right;background-color:#dedede}a{color:black;}#secret,#public,#tips{font-family: monospace;}#secret_qr,#public_qr{height:130px;}#secret,#secretLabel,#secret_qr{float:right;}
-.grayHeaders{background-color: #f6f5f2;}#shareColor{color:green;}#secretColor{color:red;}#update{display:inline-block;}#footer{font-family: monospace;}
+#titlePaper{text-align: right;background-color:#dedede}a{color:black;}#secret,#public{font-family: monospace;}#secret_qr,#public_qr{height:130px;}#secret,#secretLabel,#secret_qr{float:right;}
+.grayHeaders{background-color: #f6f5f2;}#shareColor{color:green;}#secretColor{color:red;}#update{display:inline-block;}#footer{font-size: 12px;}
 @media only screen and (max-width: 640px){#secret, #public{font-size:10px;}}@media print{.noprint {display:none;}}
 </style>
 </head>
@@ -64,10 +64,10 @@ td,th{border: 2px solid #dedede;text-align: left;padding: 5px;}
 <br><b>4. Private key</b> is used to spend funds stored in this wallet. Do not share the private key!
 <br><b>5. Check your balance</b> by going to <a href="https://www.blockchain.com/" target=_blank>blockchain.com</a> and entering your public address.</small></td></tr>
 </table>
-<small><div id="footer" class="noprint"><br><b>Donations:</b><div id="tips"><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW</div>
-<div><br><a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip)</a>
+<div id="footer" class="noprint"><b>Donations</b><br><b>BTC</b>: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW
+<div><br><a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(download zip)</a>
 <div id="update"></div></div>
-<br>Copyright &copy; 2018 pwall.org. Copyright and licensing notices included in the source code.</div></small></div>
+<br><small>Copyright &copy; 2018 pwall.org. Copyright and licensing notices included in the source code.</small></div></div>
 <script>var urlParam = window.location.search.substring(1); if(urlParam) document.getElementById("currencyName").textContent = urlParam;</script>
 <script src="bitcoinjs.min.js"></script>
 <!-- The MIT License (MIT)
