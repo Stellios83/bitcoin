@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>pwall.org - minimal universal paper wallet generator</title>
+<title>Bitcoin Paper Wallet Generator</title>
 <meta name="description" content="A minimal, reliable, fast, open-source universal paper wallet generator supporting almost every major cryptocurrency">
 <meta name="keywords" content="minimal, reliable, fast, universal, paper, wallet, generator, offline, pwall, bitcoin, btc, cryptocurrency">
 <link rel="shortcut icon" href="favicon.ico">
@@ -68,7 +68,7 @@ td,th{border: 2px solid #dedede;text-align: left;padding: 5px;}
 <br><br>See <a href="https://github.com/pwall-org/bitcoin" target=_blank>Github repository</a> for more info. <a href="https://github.com/pwall-org/bitcoin/releases" target=_blank>(Download zip).</a>
 <div id="update"></div>
 <br>Copyright &copy; 2018 pwall.org. Copyright and licensing notices included in the source code.</div></div>
-<script>var urlParam = window.location.search.substring(1); if(urlParam) document.getElementById("currencyName").textContent = urlParam;</script>
+<script>var urlParam = window.location.search.substring(1); if(urlParam){document.getElementById("currencyName").textContent = urlParam; document.title = urlParam + " Paper Wallet Generator";}</script>
 <script src="bitcoinjs.min.js"></script>
 <!-- The MIT License (MIT)
 
