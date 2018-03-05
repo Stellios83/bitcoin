@@ -27,6 +27,12 @@ Feel free to use it. https://pwall.org/
 * Deposit funds to your paper wallet by sending them to the Bitcoin address.
 * Private key is used to spend funds. Do not share it!
 
+
+#### Add ons and upgrades
+* need segwit support
+* need to look at security
+
+
 #### Tips appreciated!  
 **BTC**: 137H4GbcDz3e3DS9ADDbee4wa1GHHdcEnW  
 :punch:
